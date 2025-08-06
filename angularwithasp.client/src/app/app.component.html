@@ -1,4 +1,4 @@
-﻿<h1 id="tableLabel">Weather forecast</h1>
+<h1 id="tableLabel">Weather forecast</h1>
 
 <p>This component demonstrates fetching data from the server.</p>
 
@@ -22,3 +22,14 @@
         </tr>
     </tbody>
 </table>
+
+<!-- property binding -->
+<div [contentEditable]="isEditable" [style]="style" > {{message}}</div>
+
+<!-- event handling -->
+<button (click)="greet()" (mouseover)="onMouseOver()" (mouseout)="onMouseOut()">Greet</button>
+
+<!-- input properties sending data to child component -->
+<app-user occupation="Angular Developer"></app-user>
+
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>

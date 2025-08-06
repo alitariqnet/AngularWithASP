@@ -7,6 +7,7 @@
     <SpaRoot>..\angularwithasp.client</SpaRoot>
     <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
     <SpaProxyServerUrl>https://localhost:61505</SpaProxyServerUrl>
+    <UserSecretsId>bbf4b081-3ec1-466c-bfc1-d1aeaa03e716</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
