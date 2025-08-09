@@ -26,7 +26,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.getForecasts();
   }
+  items = new Array();
 
+  addItem(item: string) {
+    this.items.push(item);
+  }
   getForecasts() {
     this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
       (result) => {

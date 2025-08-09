@@ -10,5 +10,9 @@ import { User } from './user';
 export class UserComponent {
   occupation = input<string>();
   user!: User;
-  incrementCountEvent = output<number>();
+  addItemEvent = output<string>();
+
+  addItem() {
+    this.addItemEvent.emit('🐢');
+  }
 }
