@@ -123,3 +123,14 @@ export class AppComponent implements OnInit {
   }
   title = 'angularwithasp.client';
 }
+
+@Component({
+  selector: 'app-child',
+  template: '<p> app child component works</p>',
+  standalone: false,
+})
+export class ChildComponent implements OnInit {
+    ngOnInit(): void {
+        throw new Error('Method not implemented.');
+    }
+}
