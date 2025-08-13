@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, input } from '@angular/core';
+import { ApplicationRef, Component, OnInit, input } from '@angular/core';
 import { signal, computed } from '@angular/core';
 
 // Example of using Angular signals and computed properties
 const firstName = signal('Morgan');
 const firstNameCapitalized = computed(() => firstName().toUpperCase());
 console.log(firstNameCapitalized()); // MORGAN
+
+
 interface WeatherForecast {
   date: string;
   temperatureC: number;
@@ -26,8 +28,17 @@ export class AppComponent implements OnInit {
   draggable = true;
   message = '';
 
+ 
+ 
+
   constructor(private http: HttpClient) {
+    // Application Reference
+    var applicationRef = new ApplicationRef();
     console.log('AppComponent constructor called');
+    console.log('ApplicationRef:', applicationRef);
+    console.log('components:', applicationRef.components);
+    console.log('componentTypes:', applicationRef.componentTypes);
+
   }
 
   items = new Array();
